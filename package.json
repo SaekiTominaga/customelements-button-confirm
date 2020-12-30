@@ -1,0 +1,47 @@
+{
+	"name": "@saekitominaga/customelements-button-confirm",
+	"version": "1.0.0",
+	"description": "Display a `confirm()` modal dialog when button is pressed.",
+	"type": "module",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.10.0",
+		"@typescript-eslint/parser": "^4.10.0",
+		"brotlin": "^1.1.0",
+		"cpy-cli": "^3.1.1",
+		"eslint": "^7.16.0",
+		"eslint-config-prettier": "^7.1.0",
+		"eslint-plugin-jsdoc": "^30.7.9",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"terser": "^5.5.1",
+		"typescript": "^4.1.3"
+	},
+	"main": "dist/ButtonConfirm.esm.js",
+	"types": "dist/ButtonConfirm.esm.d.ts",
+	"scripts": {
+		"_ts-watch:tsc": "tsc -w",
+		"_ts-watch:compress": "onchange -f add -f change -v dist/ButtonConfirm.esm.js -- brotlin compress dist/ButtonConfirm.esm.js -m 1",
+		"_ts-watch:minify": "onchange -f add -f change -v dist/ButtonConfirm.esm.js -- terser dist/ButtonConfirm.esm.js -o dist/ButtonConfirm.min.esm.js -c ecma=2020 --mangle --ecma 2020 --module --source-map base=dist,filename=ButtonConfirm.esm.js,includeSources",
+		"_ts-watch:compress-minify": "onchange -f add -f change -v dist/ButtonConfirm.min.esm.js -- brotlin compress dist/ButtonConfirm.min.esm.js -m 1",
+		"_ts-watch:dts-minify": "onchange -f add -f change -v dist/ButtonConfirm.esm.d.ts -- cpy dist/ButtonConfirm.esm.d.ts dist --rename=ButtonConfirm.min.esm.d.ts",
+		"ts-watch": "run-p _ts-watch:*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SaekiTominaga/customelements-button-confirm.git"
+	},
+	"keywords": [
+		"web-components",
+		"custom-elements",
+		"confirm"
+	],
+	"author": "Saeki Tominaga",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/SaekiTominaga/customelements-button-confirm/issues"
+	},
+	"homepage": "https://github.com/SaekiTominaga/customelements-button-confirm#readme",
+	"publishConfig": {
+		"access": "public"
+	}
+}
