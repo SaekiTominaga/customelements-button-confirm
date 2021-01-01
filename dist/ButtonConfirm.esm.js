@@ -15,9 +15,9 @@ var _message;
 /**
  * Display a `confirm()` modal dialog when button is pressed.
  *
- * @version 1.0.0
+ * @version 1.0.1
  */
-export default class ConfirmButton extends HTMLButtonElement {
+export default class ButtonConfirm extends HTMLButtonElement {
     constructor() {
         super();
         _message.set(this, void 0);
