@@ -15,4 +15,4 @@ export default class ButtonConfirm extends HTMLButtonElement {
      */
     private _clickEvent;
 }
-//# sourceMappingURL=ButtonConfirm.esm.d.ts.map
+//# sourceMappingURL=ButtonConfirm.d.ts.map

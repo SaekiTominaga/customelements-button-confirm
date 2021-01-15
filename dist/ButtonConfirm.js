@@ -45,3 +45,4 @@ export default class ButtonConfirm extends HTMLButtonElement {
     }
 }
 _message = new WeakMap();
+//# sourceMappingURL=ButtonConfirm.js.map
