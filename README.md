@@ -10,7 +10,7 @@ Display a `confirm()` modal dialog when button is pressed by Custom Elements.
 
 ## Examples
 
-```
+```HTML
 <button is="x-confirm"
   data-message="Message text"
 >Submit</button>
